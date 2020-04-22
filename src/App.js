@@ -1,8 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./App.css";
+import { About, Contact, Projects, Header } from "./components";
 
 function App() {
-  return <div className="App">Hello World</div>;
+  return (
+    <Fragment>
+      <Header />
+      <About />
+      <Contact />
+      <Projects />
+    </Fragment>
+  );
 }
 
 export default App;
