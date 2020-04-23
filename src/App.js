@@ -1,15 +1,16 @@
 import React, { Fragment } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { About, Contact, Projects, Header } from "./components";
+import { About, Contact, Projects, Header, Landing } from "./components";
 
 function App() {
   return (
     <Fragment>
       <CssBaseline />
       <Header />
-      <About />
+      <Landing />
+      {/* <About />
       <Contact />
-      <Projects />
+      <Projects /> */}
     </Fragment>
   );
 }
