@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import { makeStyles } from "@material-ui/styles";
 import {
   AppBar,
   Toolbar,
@@ -12,7 +11,8 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Drawer
+  Drawer,
+  makeStyles
 } from "@material-ui/core/";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
@@ -21,14 +21,14 @@ import { AssignmentInd, Apps, ContactMail } from "@material-ui/icons";
 const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
     width: 250,
-    background: "#ddd",
+    background: "linear-gradient(to left, #2f80ed, #56ccf2 )",
     height: "100%"
   },
   avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: 100,
-    height: 100
+    width: theme.spacing(13),
+    height: theme.spacing(13)
   },
   listItem: {
     color: "black"

@@ -8,9 +8,9 @@ function App() {
       <CssBaseline />
       <Header />
       <Landing />
-      {/* <About />
+      <About />
       <Contact />
-      <Projects /> */}
+      <Projects />
     </Fragment>
   );
 }
