@@ -7,22 +7,17 @@ import {
   Button
 } from "@material-ui/core/";
 import MenuIcon from "@material-ui/icons/Menu";
-import "./styles.css";
 
 export default class Header extends Component {
   render() {
     return (
-      <div className="root">
+      <div>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
-              className="menuButton"
-              color="inherit"
-              aria-label="Menu"
-            >
+            <IconButton color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" className="grow">
+            <Typography variant="h6" color="inherit">
               News
             </Typography>
             <Button color="inherit">Login</Button>
