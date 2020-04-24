@@ -36,88 +36,82 @@ const Landing = () => {
   const classes = useStyles();
   return (
     <Fragment>
-      <Box className={classes.typedContainer}>
-        <Particles
-          width="95vw"
-          height="90vh"
-          className={classes.particlesCanva}
-          params={{
-            particles: {
-              number: {
-                value: 16,
-                density: {
-                  enable: true,
-                  value_area: 300
-                }
-              },
-              color: {
-                value: "#000"
-              },
-              shape: {
-                type: "polygon",
-                stroke: {
-                  width: 1,
-                  color: "#ddd"
-                },
-                polygon: {
-                  nb_sides: 6
-                }
-              },
-              size: {
-                value: 8,
-                random: true,
-                anim: {
-                  enable: true,
-                  speed: 2,
-                  size_min: 0.5,
-                  sync: false
-                }
-              },
-              opacity: {
-                value: 0.5,
-                random: true,
-                anim: {
-                  enable: true,
-                  speed: 1,
-                  size_min: 0.1,
-                  sync: false
-                }
-              },
-              lineLinked: {
+      <Particles
+        width="95vw"
+        height="90vh"
+        className={classes.particlesCanva}
+        params={{
+          particles: {
+            number: {
+              value: 16,
+              density: {
                 enable: true,
-                distance: 150
+                value_area: 300
               }
             },
-            interactivity: {
-              detect_on: "canvas",
-              events: {
-                onHover: {
-                  enable: true,
-                  mode: "grab"
-                }
+            color: {
+              value: "#000"
+            },
+            shape: {
+              type: "polygon",
+              stroke: {
+                width: 1,
+                color: "#ddd"
+              },
+              polygon: {
+                nb_sides: 6
+              }
+            },
+            size: {
+              value: 8,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 2,
+                size_min: 0.5,
+                sync: false
+              }
+            },
+            opacity: {
+              value: 0.5,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 1,
+                size_min: 0.1,
+                sync: false
+              }
+            },
+            lineLinked: {
+              enable: true,
+              distance: 150
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onHover: {
+                enable: true,
+                mode: "grab"
               }
             }
-          }}
-        />
+          }
+        }}
+      />
+      <Box className={classes.typedContainer}>
         <Avatar
           className={classes.avatar}
           src="assets/img/avatar.jpg"
           alt="avatar"
         />
         <Typography className={classes.title} variant="h4">
-          <Typed strings={["Portifolio em construção"]} typeSpeed={40} />
+          <Typed strings={["🚧 Portifolio em construção 🚧"]} typeSpeed={30} />
         </Typography>
         <Typography>
           <Typed
             className={classes.subtitle}
-            strings={[
-              "Desenvolvedor Web",
-              "Desenvolvedor Frontend",
-              "Desenvolvedor Backend"
-            ]}
-            typeSpeed={40}
-            backSpeed={50}
-            loop
+            strings={["Desenvolvedor Web: Frontend e Backend"]}
+            typeSpeed={30}
           ></Typed>
         </Typography>
       </Box>

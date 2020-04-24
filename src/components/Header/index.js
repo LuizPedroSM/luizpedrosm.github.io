@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -36,10 +37,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const menuItens = [
-  { listIcon: <HomeIcon />, listText: "Home" },
-  { listIcon: <AssignmentInd />, listText: "Resume" },
-  { listIcon: <Apps />, listText: "Portifolio" },
-  { listIcon: <ContactMail />, listText: "Contacts" }
+  { listIcon: <HomeIcon />, listText: "Home", listPath: "/" },
+  { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
+  { listIcon: <Apps />, listText: "Projects", listPath: "/projects" },
+  { listIcon: <ContactMail />, listText: "Contacts", listPath: "/contacts" }
 ];
 
 const Header = () => {
@@ -54,17 +55,24 @@ const Header = () => {
   const classes = useStyles();
 
   const sideList = slider => (
-    <Box className={classes.menuSliderContainer}>
+    <Box
+      className={classes.menuSliderContainer}
+      component="div"
+      onClick={toggleSlider(slider, false)}
+    >
+      <Typography variant="h6" color="inherit" style={{ textAlign: "center" }}>
+        Portfolio
+      </Typography>
+      <Divider />
       <Avatar
         className={classes.avatar}
         src="assets/img/avatar.jpg"
         alt="avatar"
-        onClick={toggleSlider(slider, false)}
       />
       <Divider />
       <List>
         {menuItens.map((lsItem, key) => (
-          <ListItem button key={key}>
+          <ListItem button key={key} component={Link} to={lsItem.listPath}>
             <ListItemIcon className={classes.listItem}>
               {lsItem.listIcon}
             </ListItemIcon>
@@ -90,7 +98,7 @@ const Header = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" color="inherit">
-              Portifolio
+              Portfolio
             </Typography>
           </Toolbar>
           <Drawer open={state.right} onClose={toggleSlider("right", false)}>
