@@ -18,6 +18,7 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import { AssignmentInd, Apps, ContactMail } from "@material-ui/icons";
+import Footer from "../Footer";
 
 const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
@@ -103,6 +104,7 @@ const Header = () => {
           </Toolbar>
           <Drawer open={state.right} onClose={toggleSlider("right", false)}>
             {sideList("right")}
+            <Footer />
           </Drawer>
         </AppBar>
       </Box>

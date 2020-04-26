@@ -5,7 +5,7 @@ import { Work, School } from "@material-ui/icons";
 const useStyles = makeStyles(theme => ({
   mainContainer: {
     background: "#ddd",
-    paddingTop: "0.5rem"
+    padding: "0.5rem 0.5rem"
   },
   timeLine: {
     position: "relative",

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import {
   About,
-  Contact,
+  Contacts,
   Projects,
   Header,
   Landing,
@@ -17,7 +17,7 @@ export default function Routes() {
         <Route path="/resume" exact component={Resume} />
         <Route path="/projects" exact component={Projects} />
         <Route path="/about" exact component={About} />
-        <Route path="/contact" exact component={Contact} />
+        <Route path="/contacts" exact component={Contacts} />
       </Switch>
     </BrowserRouter>
   );
