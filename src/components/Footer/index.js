@@ -22,8 +22,18 @@ const Footer = () => {
   const classes = useStyle();
   return (
     <BottomNavigation width="auto" style={{ background: "#222" }}>
-      <BottomNavigationAction className={classes.root} icon={<LinkedIn />} />
-      <BottomNavigationAction className={classes.root} icon={<GitHub />} />
+      <BottomNavigationAction
+        className={classes.root}
+        icon={<LinkedIn />}
+        target="_blank"
+        href="https://www.linkedin.com/in/luizpedrosm/"
+      />
+      <BottomNavigationAction
+        className={classes.root}
+        icon={<GitHub />}
+        target="_blank"
+        href="https://github.com/LuizPedroSM"
+      />
     </BottomNavigation>
   );
 };

@@ -11,11 +11,14 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(13)
   },
   title: {
-    color: "#000"
+    color: "white",
+    textAlign: "center",
+    textTransform: "uppercase"
   },
   subtitle: {
-    color: "#555",
-    marginBottom: "3rem"
+    color: "#eee",
+    marginBottom: "3rem",
+    textAlign: "left"
   },
   typedContainer: {
     display: "flex",
@@ -29,6 +32,12 @@ const useStyles = makeStyles(theme => ({
   },
   particlesCanva: {
     position: "absolute"
+  },
+  banner: {
+    backgroundColor: "rgba(10,10,20,0.5)",
+    border: "5px double #2f80ed",
+    margin: "auto",
+    borderRadius: "10px"
   }
 }));
 
@@ -99,21 +108,28 @@ const Landing = () => {
         }}
       />
       <Box className={classes.typedContainer}>
-        <Avatar
-          className={classes.avatar}
-          src="assets/img/avatar.jpg"
-          alt="avatar"
-        />
-        <Typography className={classes.title} variant="h4">
-          <Typed strings={["🚧 Portifolio em construção 🚧"]} typeSpeed={30} />
-        </Typography>
-        <Typography>
-          <Typed
-            className={classes.subtitle}
-            strings={["Desenvolvedor Web: Frontend e Backend"]}
-            typeSpeed={30}
-          ></Typed>
-        </Typography>
+        <Box className={classes.banner}>
+          <Avatar
+            className={classes.avatar}
+            src="assets/img/avatar.jpg"
+            alt="avatar"
+          />
+          <Typography className={classes.title} variant="h4">
+            <Typed
+              strings={["🚧 Portifolio em construção 🚧"]}
+              typeSpeed={30}
+            />
+          </Typography>
+          <Typography>
+            <Typed
+              className={classes.subtitle}
+              strings={[
+                "Desenvolvedor Web: <br /> Frontend: <br />  <ul>     <li>HTML/CSS</li>     <li>React</li>     <li>Vue</li>     <li>Angular</li> </ul> Backend: <ul>     <li>PHP</li>     <li>C#</li>     <li>Node</li> </ul>"
+              ]}
+              typeSpeed={30}
+            ></Typed>
+          </Typography>
+        </Box>
       </Box>
     </Fragment>
   );
