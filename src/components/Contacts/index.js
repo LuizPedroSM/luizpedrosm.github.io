@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
   box: {
     background: "linear-gradient(to left, #2f80ed, #56ccf2 )",
-    height: "100vh"
+    height: "calc(100vh - 64px)"
   }
 }));
 
