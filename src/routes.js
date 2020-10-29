@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {  Route, Switch, HashRouter } from "react-router-dom";
 import {
   About,
   Contacts,
@@ -10,7 +10,7 @@ import {
 } from "./components";
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Switch>
         <Route path="/" exact component={Landing} />
@@ -19,6 +19,6 @@ export default function Routes() {
         <Route path="/about" exact component={About} />
         <Route path="/contacts" exact component={Contacts} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
